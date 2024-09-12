@@ -63,7 +63,7 @@
     &.current .description {
       padding: 15px;
       border-bottom-width: 1px;
-      max-height: 300px;
+      max-height: 300px; // max-height 한계가 있다
     }
   }
 
