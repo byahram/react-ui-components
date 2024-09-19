@@ -80,9 +80,7 @@ const Nav = () => {
   return (
     <aside>
       <h1>
-        <Link href="/">
-          UI 요소 모음 <sub>FE재남</sub>
-        </Link>
+        <Link href="/">React UI Components</Link>
       </h1>
       <ul className="mainRoutes">
         {navRootList.map((r) => (
