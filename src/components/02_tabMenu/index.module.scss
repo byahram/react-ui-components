@@ -29,8 +29,8 @@
   }
   .description {
     padding: 15px;
-    min-height: 120px;
-    height: 120px;
+    // min-height: 120px;
+    // height: 120px;
   }
 
   .tabMenu2 .description {
@@ -102,21 +102,6 @@
           border-left: if($i == 1, none, 1px solid #ccc);
         }
       }
-
-      .input {
-        display: none;
-
-        &:checked {
-          + .tab {
-            background-color: #bde;
-          }
-
-          ~ .description {
-            display: block;
-          }
-        }
-      }
-
       .tab {
         position: absolute;
         top: 0;
@@ -129,10 +114,22 @@
         cursor: pointer;
         border-bottom: 1px solid #ccc;
       }
-
       .description {
         display: none;
         padding-top: 65px;
+      }
+      .input {
+        display: none;
+
+        &:checked {
+          + .tab {
+            background-color: #bde;
+          }
+
+          ~ .description {
+            display: block;
+          }
+        }
       }
     }
   }
