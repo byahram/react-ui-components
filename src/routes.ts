@@ -9,6 +9,10 @@ import LazyLoad3 from "./components/06_lazyLoading/3_r";
 import InfiniteScrollR from "./components/07_infiniteScroll/react";
 import InfiniteScrollV from "./components/07_infiniteScroll/vanilla";
 import ScrollBox from "./components/08_scrollBox";
+import ScrollSpy1 from "./components/09_scrollSpy/1_r";
+import ScrollSpy2 from "./components/09_scrollSpy/2_r";
+import ScrollSpy3V from "./components/09_scrollSpy/3_v";
+import ScrollSpy4 from "./components/09_scrollSpy/4_r";
 
 // routePaths
 export const routePaths = [
@@ -27,6 +31,10 @@ export const routePaths = [
   "/infiniteScroll/vanilla",
   "/scrollBox",
   "/scrollSpy",
+  "/scrollSpy/1_r",
+  "/scrollSpy/2_r",
+  "/scrollSpy/3_v",
+  "/scrollSpy/4_r",
   "/snackbar",
   "/modal",
   "/popover",
@@ -163,9 +171,38 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
   },
   "/scrollSpy": {
     key: "/scrollSpy",
-    link: "/scrollSpy",
+    link: "/scrollSpy/1_r",
     name: "09. 스크롤 스파이",
-    children: null,
+    children: [
+      "/scrollSpy/1_r",
+      "/scrollSpy/2_r",
+      "/scrollSpy/3_v",
+      "/scrollSpy/4_r",
+    ],
+  },
+  "/scrollSpy/1_r": {
+    key: "/scrollSpy/1_r",
+    link: "/scrollSpy/1_r",
+    name: "R - scroll",
+    children: ScrollSpy1,
+  },
+  "/scrollSpy/2_r": {
+    key: "/scrollSpy/2_r",
+    link: "/scrollSpy/2_r",
+    name: "R - IO",
+    children: ScrollSpy2,
+  },
+  "/scrollSpy/3_v": {
+    key: "/scrollSpy/3_v",
+    link: "/scrollSpy/3_v",
+    name: "Vanilla",
+    children: ScrollSpy3V,
+  },
+  "/scrollSpy/4_r": {
+    key: "/scrollSpy/4_r",
+    link: "/scrollSpy/4_r",
+    name: "R - ScrollBox",
+    children: ScrollSpy4,
   },
   "/snackbar": {
     key: "/snackbar",
