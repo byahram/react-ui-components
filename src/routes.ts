@@ -6,6 +6,8 @@ import LineClamps from "./components/05_lineClamp";
 import LazyLoad1 from "./components/06_lazyLoading/1_r";
 import LazyLoad2V from "./components/06_lazyLoading/2_v";
 import LazyLoad3 from "./components/06_lazyLoading/3_r";
+import InfiniteScrollR from "./components/07_infiniteScroll/react";
+import InfiniteScrollV from "./components/07_infiniteScroll/vanilla";
 
 // routePaths
 export const routePaths = [
@@ -15,11 +17,13 @@ export const routePaths = [
   "/tooltip",
   "/textBox",
   "/lineClamp",
-  '/lazyLoading',
-  '/lazyLoading/1_r',
-  '/lazyLoading/2_v',
-  '/lazyLoading/3_r',
+  "/lazyLoading",
+  "/lazyLoading/1_r",
+  "/lazyLoading/2_v",
+  "/lazyLoading/3_r",
   "/infiniteScroll",
+  "/infiniteScroll/react",
+  "/infiniteScroll/vanilla",
   "/scrollBox",
   "/scrollSpy",
   "/snackbar",
@@ -108,35 +112,47 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     name: "05. 여러줄 말줄임",
     children: LineClamps,
   },
-  '/lazyLoading': {
-    key: '/lazyLoading',
-    link: '/lazyLoading/1_r',
-    name: '06. 지연 로딩',
-    children: ['/lazyLoading/1_r', '/lazyLoading/2_v', '/lazyLoading/3_r'],
+  "/lazyLoading": {
+    key: "/lazyLoading",
+    link: "/lazyLoading/1_r",
+    name: "06. 지연 로딩",
+    children: ["/lazyLoading/1_r", "/lazyLoading/2_v", "/lazyLoading/3_r"],
   },
-  '/lazyLoading/1_r': {
-    key: '/lazyLoading/1_r',
-    link: '/lazyLoading/1_r',
-    name: 'React1',
+  "/lazyLoading/1_r": {
+    key: "/lazyLoading/1_r",
+    link: "/lazyLoading/1_r",
+    name: "React1",
     children: LazyLoad1,
   },
-  '/lazyLoading/2_v': {
-    key: '/lazyLoading/2_v',
-    link: '/lazyLoading/2_v',
-    name: 'Vanilla',
+  "/lazyLoading/2_v": {
+    key: "/lazyLoading/2_v",
+    link: "/lazyLoading/2_v",
+    name: "Vanilla",
     children: LazyLoad2V,
   },
-  '/lazyLoading/3_r': {
-    key: '/lazyLoading/3_r',
-    link: '/lazyLoading/3_r',
-    name: 'React3',
+  "/lazyLoading/3_r": {
+    key: "/lazyLoading/3_r",
+    link: "/lazyLoading/3_r",
+    name: "React3",
     children: LazyLoad3,
   },
   "/infiniteScroll": {
     key: "/infiniteScroll",
-    link: "/infiniteScroll",
+    link: "/infiniteScroll/react",
     name: "07. 무한 스크롤",
-    children: null,
+    children: ["/infiniteScroll/react", "/infiniteScroll/vanilla"],
+  },
+  "/infiniteScroll/react": {
+    key: "/infiniteScroll/react",
+    link: "/infiniteScroll/react",
+    name: "React#1 - IO",
+    children: InfiniteScrollR,
+  },
+  "/infiniteScroll/vanilla": {
+    key: "/infiniteScroll/vanilla",
+    link: "/infiniteScroll/vanilla",
+    name: "Vanilla",
+    children: InfiniteScrollV,
   },
   "/scrollBox": {
     key: "/scrollBox",
